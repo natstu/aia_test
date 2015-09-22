@@ -1,0 +1,143 @@
+// Page load animation
+
+.home, .about,.programmes, .internships, .seacrh {
+  -webkit-animation: fadein 1s; 
+  -moz-animation: fadein 1s; 
+  -ms-animation: fadein 1s; 
+  -o-animation: fadein 1s; 
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family:$primary-font;
+  background-color: $main-background-color;
+  > .container-fluid {
+    padding: 0px;
+  }
+}
+
+// NAVIGATION
+
+.glyphicon-menu-hamburger {
+  float: right;
+  background-color: rgb( 1, 222, 254 );
+  font-size: 36px;
+  z-index: 61;
+  padding: 15px;
+  font-weight: 100;
+}
+
+#header {
+  height: 59px;
+}
+
+.navbar {
+  background-color: $background-color;
+  border: none;
+  margin-bottom: 0px;
+} 
+
+.navbar-toggle,
+.navbar-toggle:focus,
+.navbar-toggle:hover { 
+  margin: 0px;
+  border: none;
+  background-color: $primary-color!important;
+  border-radius: 0px;
+  padding: 14px;
+}
+span.icon-bar {
+  width: 22px!important;
+  height: 4px!important;  
+  background-color: $text-color!important;
+}
+.navbar-nav.main {
+  > li {
+    text-transform: uppercase;
+    font-size: 13px;
+    border-left: 1px solid #4c4c4c;
+    border-top: none;
+    border-bottom: none;
+    &:last-child {
+      border-right: 1px solid #4c4c4c;
+    }
+    > a {
+      color: $text-color;
+      font-weight: 200;
+      &:hover {
+        color: $thirdary-color;
+      }
+    }
+  }
+}
+
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>.active>a:focus,
+.navbar-default .navbar-nav>.active>a:hover {
+ color: $thirdary-color;
+ background-color: transparent;
+}
+
+// SOCIAL SLIDER
+
+.social-slider {
+  display: none;
+  > a > img {
+    height: 44px;
+    width: 44px;
+    margin-bottom: 3px;
+  }
+  @media screen and (min-width: $break-ipad) {
+    right: 0px;
+    top: 150px;
+    position: absolute;
+    z-index: 9;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+// FOOTER
+
+footer {
+  @include side-padding;
+  background-color: $main-background-color;
+  height: 148px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  > .copywrite {
+    @include text-style;
+    font-weight: 100;
+  }
+  > .footer-img {
+      height: 40px;
+  }
+}
